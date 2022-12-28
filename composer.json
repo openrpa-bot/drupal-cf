@@ -41,6 +41,7 @@
         "drupal/commerce_ticketing": "*",
         "drupal/core": "^9.1",
         "drupal/core-composer-scaffold": "^9.1",
+        "drupal/examples": "^3.0",
         "drupal/search_api": "^1.19",
         "drupal/symfony_mailer": "^1.0@alpha",
         "drupal/token": "^1.9",

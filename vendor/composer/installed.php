@@ -3,7 +3,7 @@
         'name' => 'drupalcommerce/project-base',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'cf335755b083f45faa275b5b4ea8269da4198716',
+        'reference' => '3da68fc9b87035ceded64a34258bb6e709bf944c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -622,6 +622,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/examples' => array(
+            'pretty_version' => '3.0.3',
+            'version' => '3.0.3.0',
+            'reference' => '3.0.3',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/examples',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/inline_entity_form' => array(
             'pretty_version' => '1.0.0-rc14',
             'version' => '1.0.0.0-RC14',
@@ -697,7 +706,7 @@
         'drupalcommerce/project-base' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'cf335755b083f45faa275b5b4ea8269da4198716',
+            'reference' => '3da68fc9b87035ceded64a34258bb6e709bf944c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
