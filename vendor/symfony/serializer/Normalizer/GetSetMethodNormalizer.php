@@ -37,21 +37,24 @@ class GetSetMethodNormalizer extends AbstractObjectNormalizer
     private static $setterAccessibleCache = [];
 
     /**
-     * @param array $context
+     * {@inheritdoc}
      */
-    public function supportsNormalization(mixed $data, string $format = null /* , array $context = [] */): bool
+    public function supportsNormalization($data, $format = null)
     {
-        return parent::supportsNormalization($data, $format) && $this->supports($data::class);
+        return parent::supportsNormalization($data, $format) && $this->supports(\get_class($data));
     }
 
     /**
-     * @param array $context
+     * {@inheritdoc}
      */
-    public function supportsDenormalization(mixed $data, string $type, string $format = null /* , array $context = [] */): bool
+    public function supportsDenormalization($data, $type, $format = null)
     {
         return parent::supportsDenormalization($data, $type, $format) && $this->supports($type);
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function hasCacheableSupportsMethod(): bool
     {
         return __CLASS__ === static::class;
@@ -91,7 +94,10 @@ class GetSetMethodNormalizer extends AbstractObjectNormalizer
         ;
     }
 
-    protected function extractAttributes(object $object, string $format = null, array $context = []): array
+    /**
+     * {@inheritdoc}
+     */
+    protected function extractAttributes($object, $format = null, array $context = [])
     {
         $reflectionObject = new \ReflectionObject($object);
         $reflectionMethods = $reflectionObject->getMethods(\ReflectionMethod::IS_PUBLIC);
@@ -112,7 +118,10 @@ class GetSetMethodNormalizer extends AbstractObjectNormalizer
         return $attributes;
     }
 
-    protected function getAttributeValue(object $object, string $attribute, string $format = null, array $context = []): mixed
+    /**
+     * {@inheritdoc}
+     */
+    protected function getAttributeValue($object, $attribute, $format = null, array $context = [])
     {
         $ucfirsted = ucfirst($attribute);
 
@@ -134,10 +143,13 @@ class GetSetMethodNormalizer extends AbstractObjectNormalizer
         return null;
     }
 
-    protected function setAttributeValue(object $object, string $attribute, mixed $value, string $format = null, array $context = [])
+    /**
+     * {@inheritdoc}
+     */
+    protected function setAttributeValue($object, $attribute, $value, $format = null, array $context = [])
     {
         $setter = 'set'.ucfirst($attribute);
-        $key = $object::class.':'.$setter;
+        $key = \get_class($object).':'.$setter;
 
         if (!isset(self::$setterAccessibleCache[$key])) {
             self::$setterAccessibleCache[$key] = \is_callable([$object, $setter]) && !(new \ReflectionMethod($object, $setter))->isStatic();
