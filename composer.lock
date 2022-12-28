@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b5d6eebac90cf1e36e4a93accb72475d",
+    "content-hash": "f35bff1ed4b143fb49206d594213c9a9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1818,6 +1818,164 @@
             }
         },
         {
+            "name": "drupal/commerce_currency_resolver",
+            "version": "1.61.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_currency_resolver.git",
+                "reference": "8.x-1.61"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_currency_resolver-8.x-1.61.zip",
+                "reference": "8.x-1.61",
+                "shasum": "94a46574da4640b7537a4e4c0b059aee0cece6b3"
+            },
+            "require": {
+                "drupal/commerce": "^2.20",
+                "drupal/commerce_exchanger": "^1.20",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_price": "*",
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "drupal/commerce_fee": "*",
+                "drupal/commerce_shipping": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.61",
+                    "datestamp": "1664475708",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "valic",
+                    "homepage": "https://www.drupal.org/user/980550"
+                }
+            ],
+            "description": "Commerce 2 currency enhancements.",
+            "homepage": "https://www.drupal.org/project/commerce_currency_resolver",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_currency_resolver"
+            }
+        },
+        {
+            "name": "drupal/commerce_donate",
+            "version": "1.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_donate.git",
+                "reference": "8.x-1.1-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_donate-8.x-1.1-alpha1.zip",
+                "reference": "8.x-1.1-alpha1",
+                "shasum": "fdf38b0d0d62784905002c96bc865c504e8787bb"
+            },
+            "require": {
+                "drupal/commerce_currency_resolver": "*",
+                "drupal/commerce_order": "*",
+                "drupal/commerce_price": "*",
+                "drupal/core": "^8.9 || ^9",
+                "drupal/select_or_other": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.1-alpha1",
+                    "datestamp": "1633472816",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "alanburke",
+                    "homepage": "https://www.drupal.org/user/35997"
+                },
+                {
+                    "name": "asirjacques",
+                    "homepage": "https://www.drupal.org/user/1936178"
+                },
+                {
+                    "name": "stella",
+                    "homepage": "https://www.drupal.org/user/66894"
+                }
+            ],
+            "description": "Provides donation functionality.",
+            "homepage": "https://www.drupal.org/project/commerce_donate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_donate"
+            }
+        },
+        {
+            "name": "drupal/commerce_exchanger",
+            "version": "1.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/commerce_exchanger.git",
+                "reference": "8.x-1.21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/commerce_exchanger-8.x-1.21.zip",
+                "reference": "8.x-1.21",
+                "shasum": "5137e19c2f1575969c50f6a529f67671ab73b166"
+            },
+            "require": {
+                "drupal/commerce": "~2.11",
+                "drupal/commerce_price": "*",
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "require-dev": {
+                "ext-simplexml": "*",
+                "roave/security-advisories": "dev-master"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.21",
+                    "datestamp": "1663411445",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "valic",
+                    "homepage": "https://www.drupal.org/user/980550"
+                }
+            ],
+            "description": "Commerce 2 currency exchange rates / converter.",
+            "homepage": "https://www.drupal.org/project/commerce_exchanger",
+            "support": {
+                "source": "https://git.drupalcode.org/project/commerce_exchanger"
+            }
+        },
+        {
             "name": "drupal/commerce_number_pattern",
             "version": "2.32.0",
             "require": {
@@ -2658,6 +2816,74 @@
                 "source": "https://git.drupalcode.org/project/search_api",
                 "issues": "https://www.drupal.org/project/issues/search_api",
                 "irc": "irc://irc.freenode.org/drupal-search-api"
+            }
+        },
+        {
+            "name": "drupal/select_or_other",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/select_or_other.git",
+                "reference": "4.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/select_or_other-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "dfb9cb2dd40d18eb186d089411340940e6491abb"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.0.0",
+                    "datestamp": "1627315018",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "daften",
+                    "homepage": "https://www.drupal.org/user/176274"
+                },
+                {
+                    "name": "danielb",
+                    "homepage": "https://www.drupal.org/user/134005"
+                },
+                {
+                    "name": "haydeniv",
+                    "homepage": "https://www.drupal.org/user/149501"
+                },
+                {
+                    "name": "hmendes",
+                    "homepage": "https://www.drupal.org/user/3673677"
+                },
+                {
+                    "name": "legolasbo",
+                    "homepage": "https://www.drupal.org/user/2480548"
+                },
+                {
+                    "name": "qzmenko",
+                    "homepage": "https://www.drupal.org/user/3220037"
+                },
+                {
+                    "name": "vladbo",
+                    "homepage": "https://www.drupal.org/user/2696261"
+                }
+            ],
+            "description": "Provides a select box form element with additional option 'Other' to give a textfield.",
+            "homepage": "https://www.drupal.org/project/select_or_other",
+            "support": {
+                "source": "https://git.drupalcode.org/project/select_or_other"
             }
         },
         {
