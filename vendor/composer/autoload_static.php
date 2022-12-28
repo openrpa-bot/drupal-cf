@@ -122,8 +122,10 @@ class ComposerStaticInitaf84d7b6a4697c28b330d7679603f204
         ),
         'R' => 
         array (
+            'Roomify\\Bat\\' => 12,
             'Robo\\' => 5,
             'React\\Promise\\' => 14,
+            'RRule\\' => 6,
         ),
         'P' => 
         array (
@@ -235,8 +237,8 @@ class ComposerStaticInitaf84d7b6a4697c28b330d7679603f204
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'cweagans\\Composer\\' => 
         array (
@@ -430,6 +432,10 @@ class ComposerStaticInitaf84d7b6a4697c28b330d7679603f204
         array (
             0 => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint',
         ),
+        'Roomify\\Bat\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/roomify/bat/src',
+        ),
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/robo/src',
@@ -437,6 +443,10 @@ class ComposerStaticInitaf84d7b6a4697c28b330d7679603f204
         'React\\Promise\\' => 
         array (
             0 => __DIR__ . '/..' . '/react/promise/src',
+        ),
+        'RRule\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rlanvin/php-rrule/src',
         ),
         'Psy\\' => 
         array (
@@ -448,8 +458,8 @@ class ComposerStaticInitaf84d7b6a4697c28b330d7679603f204
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -698,8 +708,8 @@ class ComposerStaticInitaf84d7b6a4697c28b330d7679603f204
         ),
         'Behat\\Mink\\Driver\\' => 
         array (
-            0 => __DIR__ . '/..' . '/friends-of-behat/mink-browserkit-driver/src',
-            1 => __DIR__ . '/..' . '/behat/mink-selenium2-driver/src',
+            0 => __DIR__ . '/..' . '/behat/mink-selenium2-driver/src',
+            1 => __DIR__ . '/..' . '/friends-of-behat/mink-browserkit-driver/src',
         ),
         'Behat\\Mink\\' => 
         array (

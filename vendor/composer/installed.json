@@ -2495,6 +2495,79 @@
             "install-path": "../../web/modules/contrib/admin_toolbar"
         },
         {
+            "name": "drupal/bat",
+            "version": "1.3.0",
+            "version_normalized": "1.3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/bat.git",
+                "reference": "8.x-1.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/bat-8.x-1.3.zip",
+                "reference": "8.x-1.3",
+                "shasum": "2f3d4ffb7b6b6c1e8ff6d5faddb9e6cde25e6349"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "rlanvin/php-rrule": "^2.2",
+                "roomify/bat": "~1.3"
+            },
+            "require-dev": {
+                "drupal/bat_api": "*",
+                "drupal/bat_booking": "*",
+                "drupal/bat_event": "*",
+                "drupal/bat_facets": "*",
+                "drupal/bat_fullcalendar": "*",
+                "drupal/bat_unit": "*",
+                "drupal/commerce": "*",
+                "drupal/facets": "*",
+                "drupal/fullcalendar_library": "*",
+                "drupal/search_api": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.3",
+                    "datestamp": "1593189005",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "acrollet",
+                    "homepage": "https://www.drupal.org/user/253909"
+                },
+                {
+                    "name": "cecrs",
+                    "homepage": "https://www.drupal.org/user/1876384"
+                },
+                {
+                    "name": "ronald_istos",
+                    "homepage": "https://www.drupal.org/user/200188"
+                }
+            ],
+            "description": "A generalized Booking and Availability Management Framework",
+            "homepage": "http://drupal.org/project/bat",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/bat",
+                "issues": "http://drupal.org/project/issues/bat"
+            },
+            "install-path": "../../web/modules/contrib/bat"
+        },
+        {
             "name": "drupal/coder",
             "version": "8.3.16",
             "version_normalized": "8.3.16.0",
@@ -7160,6 +7233,119 @@
                 }
             ],
             "install-path": "../react/promise"
+        },
+        {
+            "name": "rlanvin/php-rrule",
+            "version": "v2.3.2",
+            "version_normalized": "2.3.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rlanvin/php-rrule.git",
+                "reference": "2221e8cdac037f3ead5bd17a8e19b0771534d4e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rlanvin/php-rrule/zipball/2221e8cdac037f3ead5bd17a8e19b0771534d4e7",
+                "reference": "2221e8cdac037f3ead5bd17a8e19b0771534d4e7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^5.7|^6.5|^8.0"
+            },
+            "suggest": {
+                "ext-intl": "Intl extension is needed for humanReadable()"
+            },
+            "time": "2022-05-03T13:11:22+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "RRule\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Lightweight and fast recurrence rules for PHP (RFC 5545)",
+            "homepage": "https://github.com/rlanvin/php-rrule",
+            "keywords": [
+                "date",
+                "ical",
+                "recurrence",
+                "recurring",
+                "rrule"
+            ],
+            "support": {
+                "issues": "https://github.com/rlanvin/php-rrule/issues",
+                "source": "https://github.com/rlanvin/php-rrule/tree/v2.3.2"
+            },
+            "install-path": "../rlanvin/php-rrule"
+        },
+        {
+            "name": "roomify/bat",
+            "version": "1.4.0",
+            "version_normalized": "1.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Roomify/bat.git",
+                "reference": "1034b29ee1a54031de87677632888d3873244e9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Roomify/bat/zipball/1034b29ee1a54031de87677632888d3873244e9e",
+                "reference": "1034b29ee1a54031de87677632888d3873244e9e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/dbunit": ">=1.2",
+                "phpunit/phpunit": "7.*",
+                "scrutinizer/ocular": "~1.1",
+                "squizlabs/php_codesniffer": "~2.3"
+            },
+            "time": "2020-08-25T16:07:22+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Roomify\\Bat\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roomify",
+                    "email": "hello@roomify.us",
+                    "homepage": "https://roomify.us",
+                    "role": "Developing Organization"
+                }
+            ],
+            "description": "A booking and availability management library",
+            "homepage": "https://github.com/roomify/bat",
+            "keywords": [
+                "availability management",
+                "bat",
+                "booking",
+                "booking engine",
+                "reservations",
+                "roomify",
+                "sharing economy"
+            ],
+            "support": {
+                "issues": "https://github.com/Roomify/bat/issues",
+                "source": "https://github.com/Roomify/bat/tree/master"
+            },
+            "install-path": "../roomify/bat"
         },
         {
             "name": "sebastian/cli-parser",

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'drupalcommerce/project-base',
-        'pretty_version' => '9.x-dev',
-        'version' => '9.9999999.9999999.9999999-dev',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '957a7c262580fa4969c7e107419f426c1272c2f5',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -328,6 +328,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/bat' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'reference' => '8.x-1.3',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/bat',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/coder' => array(
             'pretty_version' => '8.3.16',
             'version' => '8.3.16.0',
@@ -605,9 +614,9 @@
             'dev_requirement' => false,
         ),
         'drupalcommerce/project-base' => array(
-            'pretty_version' => '9.x-dev',
-            'version' => '9.9999999.9999999.9999999-dev',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '957a7c262580fa4969c7e107419f426c1272c2f5',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1018,8 +1027,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.0',
             ),
         ),
         'psr/event-dispatcher' => array(
@@ -1123,6 +1132,24 @@
             'install_path' => __DIR__ . '/../react/promise',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'rlanvin/php-rrule' => array(
+            'pretty_version' => 'v2.3.2',
+            'version' => '2.3.2.0',
+            'reference' => '2221e8cdac037f3ead5bd17a8e19b0771534d4e7',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rlanvin/php-rrule',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'roomify/bat' => array(
+            'pretty_version' => '1.4.0',
+            'version' => '1.4.0.0',
+            'reference' => '1034b29ee1a54031de87677632888d3873244e9e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../roomify/bat',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'roundcube/plugin-installer' => array(
             'dev_requirement' => false,
