@@ -38,6 +38,7 @@
         "drupal/bat": "*",
         "drupal/commerce": "^2.24",
         "drupal/commerce_donate": "*",
+        "drupal/commerce_license": "^2.0@beta",
         "drupal/commerce_ticketing": "*",
         "drupal/core": "^9.1",
         "drupal/core-composer-scaffold": "^9.1",
