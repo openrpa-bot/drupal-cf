@@ -37,6 +37,7 @@
         "cweagans/composer-patches": "^1.7",
         "drupal/bat": "*",
         "drupal/commerce": "^2.24",
+        "drupal/commerce_add_to_cart_link": "^2.0",
         "drupal/commerce_donate": "*",
         "drupal/commerce_license": "^2.0@beta",
         "drupal/commerce_ticketing": "*",
