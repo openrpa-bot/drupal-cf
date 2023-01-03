@@ -80,22 +80,52 @@ class StateFieldType extends FieldItemBase {
        */
       public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
         $properties['rowId'] = DataDefinition::create('integer')
-          ->setLabel('Row ID')
-          ->setDescription('Selected the Row ID.')
+          ->setLabel(t('Row ID'))
+          ->setDescription(t('Selected the Row ID.'))
           ->setRequired(TRUE);
 
         $properties['columnId'] = DataDefinition::create('integer')
-          ->setLabel('Column ID')
-          ->setDescription('Selected the Column ID.')
+          ->setLabel(t('Column ID'))
+          ->setDescription(t('Selected the Column ID.'))
           ->setRequired(TRUE);
 
         $properties['Option'] = DataDefinition::create('string')
-          ->setLabel('Option')
-          ->setDescription('Selected the Option.')
+          ->setLabel(t('Option'))
+          ->setDescription(t('Selected the Option.'))
           ->setRequired(TRUE);
 
         return $properties;
       }
+
+       /**
+         * {@inheritdoc}
+         */
+        public function fieldSettingsForm(array $form, FormStateInterface $form_state) {
+          $element = [];
+
+          $element['maxRowId'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Max Row ID'),
+            '#default_value' => $this->getSetting('rowId_default_value'),
+            '#required' => TRUE,
+          ];
+
+          $element['maxColumnId'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Max Column ID'),
+            '#default_value' => $this->getSetting('columnId_default_value'),
+            '#required' => TRUE,
+          ];
+
+          $element['Options'] = [
+            '#type' => 'textfield',
+            '#title' => $this->t('Available Options'),
+            '#default_value' => $this->getSetting('Option_default_value'),
+            '#required' => TRUE,
+          ];
+
+          return $element;
+        }
 }
 
 
