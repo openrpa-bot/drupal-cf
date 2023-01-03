@@ -1,6 +1,6 @@
 name: State to Image
 type: module
-description: 'Provides example code for you to learn from.'
+description: 'State to select and corresponding Image to display.'
 package: FIELD TYPES
 core_version_requirement: ^8.7.7 || ^9
 dependencies:
