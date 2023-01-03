@@ -1,0 +1,12 @@
+tooltip:
+  version: VERSION
+  js:
+    js/tooltip.js: {}
+  css:
+    component:
+      css/tooltip.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+    - core/popperjs

@@ -1,0 +1,12 @@
+name: Tooltip
+type: module
+description: Provides advanced HTML tooltip with PopperJS library.
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - drupal:editor
+
+# Information added by Drupal.org packaging script on 2022-06-04
+version: '1.0.0'
+project: 'tooltip'
+datestamp: 1654344968

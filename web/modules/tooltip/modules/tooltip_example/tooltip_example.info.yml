@@ -1,0 +1,12 @@
+name: Tooltip - Example
+type: module
+description: Provides example for the Tooltip module
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - tooltip:tooltip
+
+# Information added by Drupal.org packaging script on 2022-06-04
+version: '1.0.0'
+project: 'tooltip'
+datestamp: 1654344968

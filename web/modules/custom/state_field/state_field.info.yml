@@ -1,0 +1,10 @@
+name: State to Image
+type: module
+description: 'Provides example code for you to learn from.'
+package: FIELD TYPES
+core_version_requirement: ^8.7.7 || ^9
+dependencies:
+  - drupal:field
+
+version: '1.0.0'
+project: 'State To Image'
