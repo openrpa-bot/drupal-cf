@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Drupal\color_field\Plugin\Field\FieldType;
+namespace Drupal\state_field\Plugin\Field\FieldType;
 
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemBase;
@@ -12,7 +12,7 @@ use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\TypedData\DataDefinition;
 
 /**
- * Plugin implementation of the 'color_type' field type.
+ * Plugin implementation of the 'state_field' field type.
  *
  * @FieldType(
  *   id = "state_field_type",
@@ -45,7 +45,7 @@ class StateFieldType extends FieldItemBase {
         'Option' => [
           'description' => 'Selected an option',
           'type' => 'varchar',
-          'size' => $field_definition->getSetting('Option_Length'),
+          'length' => $field_definition->getSetting('Option_Length'),
           'not null' => TRUE,
           'default' => $field_definition->getSetting('Option_default_value'),
         ]
@@ -57,11 +57,11 @@ class StateFieldType extends FieldItemBase {
      */
     public static function defaultStorageSettings() {
       return [
-        'rowId_Max_Limit'         => (int)10,
-        'columnId_Max_Limit'      => (int)10,
-        'rowId_default_value'     => (int)0,
-        'columnId_default_value'  => (int)0,
-        'Option_Length'           => (int)264,
+        'rowId_Max_Limit'         => 10,
+        'columnId_Max_Limit'      => 10,
+        'rowId_default_value'     => 0,
+        'columnId_default_value'  => 0,
+        'Option_Length'           => 264,
         'Option_default_value'    => 'None',
       ] + parent::defaultStorageSettings();
     }
@@ -75,6 +75,27 @@ class StateFieldType extends FieldItemBase {
         'available_images' => [],
       ] + parent::defaultFieldSettings();
     }
+    /**
+       * {@inheritdoc}
+       */
+      public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+        $properties['rowId'] = DataDefinition::create('integer')
+          ->setLabel('Row ID')
+          ->setDescription('Selected the Row ID.')
+          ->setRequired(TRUE);
+
+        $properties['columnId'] = DataDefinition::create('integer')
+          ->setLabel('Column ID')
+          ->setDescription('Selected the Column ID.')
+          ->setRequired(TRUE);
+
+        $properties['Option'] = DataDefinition::create('string')
+          ->setLabel('Option')
+          ->setDescription('Selected the Option.')
+          ->setRequired(TRUE);
+
+        return $properties;
+      }
 }
 
 
