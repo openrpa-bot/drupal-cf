@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+//declare(strict_types = 1);
 
 namespace Drupal\state_field\Plugin\Field\FieldType;
 
@@ -18,6 +18,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   id = "state_field_type",
  *   label = @Translation("State Field"),
  *   description = @Translation("State to select and corresponding Image to display."),
+ *   default_formatter = "state_field_formatter",
  * )
  */
 class StateFieldType extends FieldItemBase {
@@ -76,26 +77,26 @@ class StateFieldType extends FieldItemBase {
       ] + parent::defaultFieldSettings();
     }
     /**
-       * {@inheritdoc}
-       */
-      public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
-        $properties['rowId'] = DataDefinition::create('integer')
-          ->setLabel(t('Row ID'))
-          ->setDescription(t('Selected the Row ID.'))
-          ->setRequired(TRUE);
+           * {@inheritdoc}
+           */
+          public static function propertyDefinitions(FieldStorageDefinitionInterface $field_definition) {
+            $properties['rowId'] = DataDefinition::create('integer')
+              ->setLabel(t('Row ID'))
+              ->setDescription(t('Selected the Row ID.'))
+              ->setRequired(TRUE);
 
-        $properties['columnId'] = DataDefinition::create('integer')
-          ->setLabel(t('Column ID'))
-          ->setDescription(t('Selected the Column ID.'))
-          ->setRequired(TRUE);
+            $properties['columnId'] = DataDefinition::create('integer')
+              ->setLabel(t('Column ID'))
+              ->setDescription(t('Selected the Column ID.'))
+              ->setRequired(TRUE);
 
-        $properties['Option'] = DataDefinition::create('string')
-          ->setLabel(t('Option'))
-          ->setDescription(t('Selected the Option.'))
-          ->setRequired(TRUE);
+            $properties['Option'] = DataDefinition::create('string')
+              ->setLabel(t('Option'))
+              ->setDescription(t('Selected the Option.'))
+              ->setRequired(TRUE);
 
-        return $properties;
-      }
+            return $properties;
+          }
 
        /**
          * {@inheritdoc}
@@ -104,21 +105,22 @@ class StateFieldType extends FieldItemBase {
           $element = [];
 
           $element['maxRowId'] = [
-            '#type' => 'textfield',
+            '#type' => 'number',
             '#title' => $this->t('Max Row ID'),
             '#default_value' => $this->getSetting('rowId_default_value'),
             '#required' => TRUE,
           ];
 
           $element['maxColumnId'] = [
-            '#type' => 'textfield',
+            '#type' => 'number',
             '#title' => $this->t('Max Column ID'),
             '#default_value' => $this->getSetting('columnId_default_value'),
             '#required' => TRUE,
           ];
 
-          $element['Options'] = [
+          $element['availableOptions'] = [
             '#type' => 'textfield',
+            '#maxlength' => 255,
             '#title' => $this->t('Available Options'),
             '#default_value' => $this->getSetting('Option_default_value'),
             '#required' => TRUE,
