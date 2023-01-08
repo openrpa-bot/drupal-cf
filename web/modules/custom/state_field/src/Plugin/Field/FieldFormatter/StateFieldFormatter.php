@@ -19,21 +19,16 @@ use Drupal\Core\Url;
  */
 class StateFieldFormatter extends FormatterBase {
 
-  /**
-   * {@inheritdoc}
-   */
-  public function viewElements(FieldItemListInterface $items, $langcode) {
-    $elements = [];
+   /**
+     * {@inheritdoc}
+     */
+    public function viewElements(FieldItemListInterface $items, $langcode) {
+      foreach ($items as $delta => $item) {
+        // Render each element as markup.
+       // $element[$delta] = ['#markup' => $item->rowId .':' . $item->columnId .':'.$item->Option ];
+      }
 
-    foreach ($items as $delta => $item) {
-      $elements[$delta] = [
-        '#type' => 'link',
-        '#title' => $item->value,
-        '#url' => Url::fromUri('mailto:' . $item->value),
-      ];
+      return $element;
     }
-
-    return $elements;
-  }
 
 }

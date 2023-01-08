@@ -1,8 +1,8 @@
 name: State to Image
 type: module
 description: 'State to select and corresponding Image to display.'
-package: FIELD TYPES
-core_version_requirement: ^8.7.7 || ^9
+package: AA FIELD TYPES
+core_version_requirement: ^8 || ^9
 dependencies:
   - drupal:field
 

@@ -18,6 +18,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   id = "state_field_type",
  *   label = @Translation("State Field"),
  *   description = @Translation("State to select and corresponding Image to display."),
+ *   default_widget = "state_field_widget",
  *   default_formatter = "state_field_formatter",
  * )
  */
